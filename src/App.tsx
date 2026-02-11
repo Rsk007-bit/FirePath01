@@ -4,6 +4,7 @@ import { ExpensesPage } from './pages/ExpensesPage';
 import { RiskPage } from './pages/RiskPage';
 import { SimulationPage } from './pages/SimulationPage';
 import { UserProfileDashboard } from './pages/UserProfileDashboard';
+import { ArticlesPage } from './pages/ArticlesPage';
 import { AuthProvider } from './context/AuthContext';
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/expenses" element={<ExpensesPage />} />
           <Route path="/risk" element={<RiskPage />} />
           <Route path="/simulation" element={<SimulationPage />} />
+          <Route path="/articles" element={<ArticlesPage />} />
         </Routes>
       </Router>
     </AuthProvider>

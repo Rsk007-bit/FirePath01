@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { Navigation } from '../components/Navigation';
 import { SignInModal } from '../components/SignInModal';
 
 export const HomePage = () => {
@@ -10,36 +11,7 @@ export const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <button onClick={() => navigate('/')} className="text-2xl font-bold text-emerald-800 hover:opacity-80 transition">
-                FIRE<span className="text-amber-500">Path</span>
-              </button>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-600 hover:text-emerald-700 font-medium">Articles</a>
-              <a href="#" className="text-gray-600 hover:text-emerald-700 font-medium">Calculators</a>
-              <a href="#" className="text-gray-600 hover:text-emerald-700 font-medium">Community</a>
-              {isSignedIn ? (
-                <button 
-                  onClick={() => navigate('/profile')}
-                  className="bg-emerald-700 text-white px-4 py-2 rounded-md hover:bg-emerald-800 transition">
-                  My Dashboard
-                </button>
-              ) : (
-                <button 
-                  onClick={() => setShowSignIn(true)}
-                  className="bg-emerald-700 text-white px-4 py-2 rounded-md hover:bg-emerald-800 transition">
-                  Sign In
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation showFullNav={true} />
 
       {/* Hero Section */}
       <div className="relative bg-emerald-900 overflow-hidden">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Navigation } from '../components/Navigation';
 
 export const ExpensesPage = () => {
   const navigate = useNavigate();
@@ -32,20 +33,7 @@ export const ExpensesPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <button 
-                onClick={() => navigate('/')}
-                className="text-2xl font-bold text-emerald-800 hover:opacity-80 transition">
-                FIRE<span className="text-amber-500">Path</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation showFullNav={true} />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
