@@ -53,6 +53,7 @@ export const HomePage = () => {
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4">
             Master Your Money.<br/>
+            Master Your Finances.<br/>
             <span className="text-amber-400">Design Your Freedom.</span>
           </h1>
           <p className="mt-4 max-w-2xl text-xl text-gray-200">
